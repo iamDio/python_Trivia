@@ -20,6 +20,8 @@ for i,d in enumerate(questions):
   guess= input()
   if guess.lower() == questions[i]['correct']:
      print('correct')
+  else:
+    print('incorrect answer!!!')
 
 
 
