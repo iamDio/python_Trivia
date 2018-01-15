@@ -1,19 +1,25 @@
-#kmh = int(input("Enter km/h: "))
-#mph =  0.6214 * kmh
-#print("Speed:", kmh, "KM/H = ", mph, "MPH")
-
-question1= [{
+questions= [
+  {
 'question': 'who is the president of the USA?',
 'answers': ['Barack Obama','donald trump','Mike Pence','Joe Biden'],
 'correct': 'donald trump'
-}]
+},
+{'question': 'Who is the quarterback for the New England Patriots?',
+'answers': ['Peyton Manning','Chad Pennington','tom brady','Mark Sanchez'],
+'correct': 'tom brady'
+},
+{'question': 'Who wrote hamlet?',
+'answers': ['George Orwell','Elton Jon','William Shakespeare','Mark Twain'],
+'correct': 'william shakespeare'
+}
+]
+
+for i,d in enumerate(questions):
+  print(d['question'])
+  print(','.join(d['answers']))
+  guess= input()
+  if guess.lower() == questions[i]['correct']:
+     print('correct')
 
 
-print(question1[0]['question'])
-print(','.join(question1[0]['answers']))
 
-guess= input()
-
-if guess.lower() == question1[0]['correct']:
-  print('correct')
-#guess= input()
